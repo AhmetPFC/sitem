@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Yılmaz | Kişisel Tanıtım</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Raleway', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+            color: #f0f0f0;
+            line-height: 1.7;
+            min-height: 100vh;
+            padding: 20px;
+            background-attachment: fixed;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            background: rgba(15, 15, 15, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff416c, #ff4b2b, #ff9500);
+            z-index: 1;
+        }
+        
+        header {
+            text-align: center;
+            padding: 80px 30px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(40, 40, 40, 0.8) 0%, rgba(20, 20, 20, 0.9) 100%);
+            z-index: -1;
+        }
+        
+        .logo-container {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 30px;
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(255, 75, 43, 0.3);
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.5s ease;
+        }
+        
+        .logo-container:hover {
+            transform: scale(1.05) rotate(5deg);
+            box-shadow: 0 15px 40px rgba(255, 75, 43, 0.5);
+        }
+        
+        .logo {
+            font-size: 4rem;
+            font-weight: 800;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(90deg, #ff9500, #ff416c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .tagline {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            color: #ccc;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .intro-text {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            color: #ddd;
+            font-weight: 300;
+            line-height: 1.8;
+            padding: 0 20px;
+        }
+        
+        .highlight {
+            color: #ff9500;
+            font-weight: 500;
+        }
+        
+        .social-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 60px 30px;
+        }
+        
+        .social-box {
+            background: rgba(30, 30, 30, 0.8);
+            border-radius: 15px;
+            width: 48%; /* İki kutu yan yana */
+            padding: 40px 35px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: visible;
+        }
+        
+        .social-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            border-color: rgba(255, 149, 0, 0.2);
+        }
+        
+        .social-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #ff416c, #ff4b2b, #ff9500);
+        }
+        
+        .social-box h2 {
+            font-size: 1.8rem;
+            margin-bottom: 35px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: 600;
+            text-align: center;
+            color: #f0f0f0;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1px;
+        }
+        
+        .social-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .social-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: rgba(40, 40, 40, 0.6);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            min-height: 110px;
+        }
+        
+        .social-item:hover {
+            background: rgba(50, 50, 50, 0.8);
+            transform: translateX(5px);
+            border-color: rgba(255, 149, 0, 0.3);
+        }
+        
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+            border-radius: 50%;
+            font-size: 1.4rem;
+            color: #ff9500;
+            margin-right: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 149, 0, 0.2);
+        }
+        
+        .social-content {
+            flex: 1;
+        }
+        
+        .social-content h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #f0f0f0;
+        }
+        
+        .social-content p {
+            font-size: 0.9rem;
+            color: #bbb;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+        
+        .social-content a {
+            color: #ff9500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            display: inline-block;
+            margin-top: 5px;
+            font-size: 0.95rem;
+        }
+        
+        .social-content a:hover {
+            color: #ff416c;
+            text-decoration: underline;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            background: rgba(10, 10, 10, 0.9);
+            color: #888;
+            font-size: 1rem;
+            font-weight: 300;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .signature {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            color: #666;
+        }
+        
+        .copyright {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.9rem;
+            color: #555;
+        }
+        
+        @media (max-width: 992px) {
+            .social-box {
+                width: 100%;
+                max-width: 700px;
+            }
+            
+            .social-section {
+                flex-direction: column;
+                align-items: center;
+                padding: 40px 20px;
+                gap: 35px;
+            }
+            
+            header {
+                padding: 60px 20px 40px;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .logo-container {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .logo {
+                font-size: 3.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .social-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .social-box {
+                padding: 35px 25px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .intro-text {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .logo-container {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .logo {
+                font-size: 2.8rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .tagline {
+                font-size: 1.1rem;
+            }
+            
+            .social-item {
+                padding: 12px;
+                min-height: 100px;
+            }
+            
+            .social-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
+            }
+            
+            .social-content h3 {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <div class="logo">A</div>
+            </div>
+            <h1>ALİ YILMAZ</h1>
+            <div class="tagline">Yazılım Mühendisi & UI/UX Tasarımcı</div>
+            <p class="intro-text">
+                <span class="highlight">10+ yıllık deneyime</span> sahip bir yazılım mühendisiyim. Modern web teknolojileri, kullanıcı deneyimi tasarımı ve yapay zeka uygulamaları üzerine uzmanlaştım. 
+                Yeni teknolojiler öğrenmek ve açık kaynak projeler geliştirmek benim için bir tutku. 
+                Profesyonel kariyerimin yanı sıra, doğa fotoğrafçılığı ve seyahat etmek en büyük hobilerim arasında yer alıyor.
+            </p>
+        </header>
+        
+        <div class="social-section">
+            <div class="social-box">
+                <h2>SOSYAL MEDYA</h2>
+                <div class="social-grid">
+                    <div class="social-item">
+                        <div class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="social-content">
+                            <h3>Instagram</h3>
+                            <p>Günlük hayatım ve projelerim</p>
+                            <a href="#" target="_blank">@aliyilmazdesign</a>
+                        </div>
+                    </div>
+                    
+                    <div class="social-item">
+                        <div class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <div class="social-content">
+                            <h3>YouTube</h3>
+                            <p>Teknoloji ve tasarım dersleri</p>
+                            <a href="#" target="_blank">Ali Yılmaz Tech</a>
+                        </div>
+                    </div>
+                    
+                    <div class="social-item">
+                        <div class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div class="social-content">
+                            <h3>LinkedIn</h3>
+                            <p>Profesyonel kariyer bağlantılarım</p>
+                            <a href="#" target="_blank">Ali Yılmaz Profil</a>
+                        </div>
+                    </div>
+                    
+                    <div class="social-item">
+                        <div class="social-icon">
+                            <i class="fab fa-medium-m"></i>
+                        </div>
+                        <div class="social-content">
+                            <h3>Medium</h3>
+                            <p>Teknik makaleler ve deneyimler</p>
+                            <a href="#" target="_blank">@aliyilmaz.tech</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="social-box">
+                <h2>İLETİŞİM</h2>
+                <div class="social-grid">
+                    <div class="social-item">
+                        <div class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="social-content">
+                            <h3>E-posta</h3>
+                            <p>Doğrudan iletişim için</p>
+                            <a href="mailto:ali@ornek.com">ali@ornek.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="social-item">
+                        <div class="social-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="social-content">
+                            <h3>Telefon</h3>
+                            <p>Hafta içi 09:00-18:00</p>
+                            <a href="tel:+905551112233">+90 555 111 22 33</a>
+                        </div>
+                    </div>
+                    
+                    <div class="social-item">
+                        <div class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="social-content">
+                            <h3>WhatsApp</h3>
+                            <p>Anlık mesajlaşma</p>
+                            <a href="#" target="_blank">Mesaj Gönder</a>
+                        </div>
+                    </div>
+                    
+                    <div class="social-item">
+                        <div class="social-icon">
+                            <i class="fab fa-telegram-plane"></i>
+                        </div>
+                        <div class="social-content">
+                            <h3>Telegram</h3>
+                            <p>Hızlı iletişim kanalı</p>
+                            <a href="#" target="_blank">@aliyilmaz</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <p>Profesyonel işbirliği ve proje teklifleri için iletişime geçebilirsiniz</p>
+                <p class="signature">Modern Tasarım | Premium Siyah Temalı Kişisel Web Sitesi</p>
+                <div class="copyright">© 2023 Ali Yılmaz. Tüm hakları saklıdır.</div>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        // Logo hover efekti için JavaScript
+        document.querySelector('.logo-container').addEventListener('mouseenter', function() {
+            this.style.background = 'linear-gradient(135deg, #ff4b2b, #ff9500)';
+        });
+        
+        document.querySelector('.logo-container').addEventListener('mouseleave', function() {
+            this.style.background = 'linear-gradient(135deg, #ff416c, #ff4b2b)';
+        });
+        
+        // Sayfa yüklendiğinde logo animasyonu
+        window.addEventListener('load', function() {
+            const logo = document.querySelector('.logo-container');
+            logo.style.transform = 'scale(0)';
+            logo.style.opacity = '0';
+            
+            setTimeout(() => {
+                logo.style.transition = 'all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                logo.style.transform = 'scale(1)';
+                logo.style.opacity = '1';
+            }, 300);
+        });
+    </script>
+</body>
+</html>
